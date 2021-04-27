@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/interactive-pricing-component/static/css/main.863f8a1d.chunk.css",
+    "main.js": "/interactive-pricing-component/static/js/main.20125ed7.chunk.js",
+    "main.js.map": "/interactive-pricing-component/static/js/main.20125ed7.chunk.js.map",
+    "runtime-main.js": "/interactive-pricing-component/static/js/runtime-main.707e109a.js",
+    "runtime-main.js.map": "/interactive-pricing-component/static/js/runtime-main.707e109a.js.map",
+    "static/js/2.7dafe88b.chunk.js": "/interactive-pricing-component/static/js/2.7dafe88b.chunk.js",
+    "static/js/2.7dafe88b.chunk.js.map": "/interactive-pricing-component/static/js/2.7dafe88b.chunk.js.map",
+    "index.html": "/interactive-pricing-component/index.html",
+    "static/css/main.863f8a1d.chunk.css.map": "/interactive-pricing-component/static/css/main.863f8a1d.chunk.css.map",
+    "static/js/2.7dafe88b.chunk.js.LICENSE.txt": "/interactive-pricing-component/static/js/2.7dafe88b.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/interactive-pricing-component/static/media/pattern-circles.9f6ed14b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.707e109a.js",
+    "static/js/2.7dafe88b.chunk.js",
+    "static/css/main.863f8a1d.chunk.css",
+    "static/js/main.20125ed7.chunk.js"
+  ]
+}
