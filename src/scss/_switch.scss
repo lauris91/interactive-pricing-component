@@ -1,0 +1,44 @@
+.common-switch-styles {
+  width: 34px;
+  border-radius: 20px;
+  height: 18px;
+}
+
+input.check {
+  @extend .common-switch-styles;
+  appearance: none;
+  margin: 0px;
+  z-index: 5;
+  right: 0;
+  position: absolute;
+  outline: none;
+  cursor: pointer;
+}
+
+.switch-box {
+  @extend .common-switch-styles;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  background: $light-grayish-blue-x;
+  margin-left: 15px;
+}
+
+input.check:checked + .switch-box {
+  background: $soft-cyan;
+}
+
+.switch {
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  position: absolute;
+  left: 3px;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+input.check:checked + .switch-box .switch {
+  left: 17px;
+}
