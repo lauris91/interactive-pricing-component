@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/viktors91/interactive-pricing-component)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/viktors91/interactive-pricing-component
+- Live Site URL: https://viktors91.github.io/interactive-pricing-component/
 
 ## My process
 
