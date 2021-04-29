@@ -40,6 +40,7 @@ const SliderComponent = () => {
         </div>
         <div className="slider-row">
           <input
+            aria-label="price-range"
             type="range"
             min={minValue}
             max={maxValue}
@@ -55,6 +56,7 @@ const SliderComponent = () => {
         <div className="billing-info">
           <span>Monthly billing</span>
           <input
+            aria-label="monthly billing"
             className="check"
             type="checkbox"
             onChange={(e) => setDiscount(e.target.checked)}
