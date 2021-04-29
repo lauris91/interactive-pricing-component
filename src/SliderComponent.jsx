@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 const pricingData = [
   { views: "10K", price: 8 },
@@ -8,40 +8,46 @@ const pricingData = [
   { views: "1M", price: 32 },
 ];
 
-document.querySelectorAll(".slider").forEach(function (el) {
-  el.oninput = function () {
-    const valPercent =
-      (el.valueAsNumber - parseInt(el.min)) /
-      (parseInt(el.max) - parseInt(el.min));
-    const style =
-      "background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(" +
-      valPercent +
-      ", #a5f3eb), color-stop(" +
-      valPercent +
-      ", #eaeefb));";
-    el.style = style;
-  };
-  el.oninput();
-});
+const active = "#a5f3eb";
+const inactive = "#eaeefb";
+const minValue = 1;
+const maxValue = 5;
+const styleInput = {};
 
 const SliderComponent = () => {
   const [data, setData] = useState(pricingData[0]);
   const [discount, setDiscount] = useState(false);
+  const [rangeValue, setRangeValue] = useState(1);
+  const inputRef = useRef();
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+    setData(pricingData[value - 1]);
+    setRangeValue(value);
+
+    const progress = (value - 1) * 25;
+    const newBackgroundStyle = `linear-gradient(90deg, ${active} 0% ${progress}%,   ${inactive} ${progress}% 100%)`;
+    inputRef.current.style.background = newBackgroundStyle;
+  };
+
   return (
     <>
       <div className="price-box">
         <div className="pageviews">{data.views} pageviews</div>
         <div className="price">
-          <span>${discount ? data.price / 4 : data.price}.00</span> / month
+          <span>${discount ? data.price - data.price / 4 : data.price}.00</span>{" "}
+          / month
         </div>
         <div className="slider-row">
           <input
             type="range"
-            min="1"
-            max="5"
-            defaultValue={1}
+            min={minValue}
+            max={maxValue}
+            defaultValue={rangeValue}
             className="slider"
-            onChange={(e) => setData(pricingData[e.target.value - 1])}
+            ref={inputRef}
+            onChange={(e) => handleChange(e)}
+            style={styleInput}
           />
         </div>
       </div>
