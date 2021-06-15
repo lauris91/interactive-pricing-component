@@ -2,7 +2,7 @@
   "name": "interactive-pricing-component",
   "version": "0.1.1",
   "private": true,
-  "homepage": "http://viktors91.github.io/interactive-pricing-component",
+  "homepage": "http://lauris91.github.io/interactive-pricing-component",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
